@@ -1,0 +1,7 @@
+| Action                                                  | Method   | Endpoint                                  | Example Body                                                             |
+| ------------------------------------------------------- | -------- | ----------------------------------------- | ------------------------------------------------------------------------ |
+| Add Student                                             | `POST`   | `http://localhost:4000/api/students`      | `{ "name":"Juan", "email":"juan@gmail.com", "course":"BSIT", "year":1 }` |
+| Get Students                                            | `GET`    | `http://localhost:4000/api/students`      | —                                                                        |
+| Update Student                                          | `PUT`    | `http://localhost:4000/api/students/{id}` | `{ "year": 2 }`                                                          |
+| Delete Student                                          | `DELETE` | `http://localhost:4000/api/students/{id}` | —                                                                        |
+| (Same for Teacher/Admin with `/teachers` and `/admins`) |          |                                           |                                                                          |

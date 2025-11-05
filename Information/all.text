@@ -1,0 +1,101 @@
+//package.json
+{
+  "name": "information-system",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KielCadahin/information_system.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KielCadahin/information_system/issues"
+  },
+  "homepage": "https://github.com/KielCadahin/information_system#readme",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "firebase-admin": "^13.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
+
+
+//serviceAccountKey,json
+{
+  "type": "service_account",
+  "project_id": "information-system-69107",
+  "private_key_id": "f13a6dee52fabc554303d704c88dfe40dab78b86",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDpfvB68XL8A8O6\nhepYPSd3ZA6J2B3oFooZ8GvfszsaR0NlmThaPkhecL32+w+LDgWAmD9TTgAHnWvK\nsjEjFpEcSsnprcJBrDePZMAOs3C6A7pUNEKzAsUIW5E3KdIqQSrB87lZWFY2HgXb\nPqaz3b+1JYrU30prKrBaXse0CwoxsJ6qW1XCX2+tTDWTsQXxJX23taet/+o2Qzc6\n/DRhEjLj9FNKFBg1ubRdqaiBJqjdT5h1Yw2IoME+LeiKzOGdFTiHt3bYR1v4UPQB\nClPQUC7RryXordJCMsqDVkoGv4uT5fGlgyk734oBUWkXGpNyQhzNs+8hfOgIi6nl\n6Yj27anNAgMBAAECggEAQhA63SYcaOZtxgPmspGW7YY/QMwHZieeaklmVBQjaEN6\nc6/+zDWsByBx9wPAuZC9iM1KuXirtHvbSC3TjkBvzSfx6e5SNH+T9rvERUSK4+5z\nFSj2KCzj74Hs28U24+KtRNP/AKLoPYaQFKCszN40Q/37wk/s/9ZDsEX5zdyDxVvP\nodqXRnKPh9d5A3jZNQpeHz+zwe6+vJKCFQIbivP3wR2Krl9bOnmJvKiT30Rl6Hu4\nrtaGatfPpMCBhhDCZLE+nMbNgGUKnJ7tRpx/wjhjqxIpgFtBdonCC4Yaisd+2N94\nrrx0w6C5tZQRVq8x9O/3omYA8K9I+f8x2YajpriFNwKBgQD4uq2PjkxrLAUBya98\n4uXwroQ5wrTyM2cfokoDcjxUqKN28PPPK4TEy1W9G0pO8/n4hliNRjdwh2j15405\nwRHA2qkVDTNTc4t2BEgzMAJUZsNpKlA4Z6nFq9AqtALHYyypy/razHlD3PxbGuwx\nnkAMGGI8cjM3zHM+2NhnWU0XjwKBgQDwUkPmdDhETe7hMBVdilDgF4h9nWRLNZnL\nBUWM0ZnPAJ1z99kAvxdFPGFfh7y7l2Z3Rh7JG/cQG3ncAisyErtxksqMdxvce1Wd\nnBdJD7CaXyH8yHYU7Jx9xdDFaZYCxnlu+THjEFSo3YROpkPlo+iZUJZ37+P2cuO3\nJbfIVV7a4wKBgQCUp/XNg822jAOeEu2YZX/qPlN2tiExVHmA1Z0IvEDElFnGX7JI\nEolymNhwgpwB3h17ZMgN/3ZpAfVAaxjj+LlkmwtNMquHZ9plOZ/xP/NUgGqwMwLp\nA0PbiZmLvDSg+GwcO3Z9SJH9dlk5FjkuWpeK4xPrbpGf+siyOiX0dtH1jwKBgB+p\nFtzzjr4g7kmohggOwtzi/M5fv+jQpPREO4dzzamh0RyIGISqqCws6j8lqM2mAo/Q\nIxonnwL2O7Wqa3prUVqDFkAvKPKBJSRgfgjYElIkGlwtJLFZArznJLv9TxAKidD+\n732UlzKwDFA4Q1WrpGceYNRoPEYpmKp2Q6IW7So1AoGBANjl89FXo/+kW6eo/a6e\nWAADcZrcgJ5XYi6kdM0u9WtM6yhJj0ePpCxTySlMeLeBrpSZmm3R/tBWzifqoNsf\nG8atqYjAxwm2G08orpAEl+OgSNf6zO7zk9dzsB750kv7BpgWtKuuRWILJmFce5VH\n8s78i3a6JBzdMuYybPGtjojx\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@information-system-69107.iam.gserviceaccount.com",
+  "client_id": "102756078930205045634",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40information-system-69107.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
+
+
+
+//.env
+PORT=4000
+FIREBASE_PROJECT_ID=information-system-69107
+FIREBASE_CLIENT_EMAIL=firebase-adminsdk-fbsvc@information-system-69107.iam.gserviceaccount.com
+FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDpfvB68XL8A8O6\nhepYPSd3ZA6J2B3oFooZ8GvfszsaR0NlmThaPkhecL32+w+LDgWAmD9TTgAHnWvK\nsjEjFpEcSsnprcJBrDePZMAOs3C6A7pUNEKzAsUIW5E3KdIqQSrB87lZWFY2HgXb\nPqaz3b+1JYrU30prKrBaXse0CwoxsJ6qW1XCX2+tTDWTsQXxJX23taet/+o2Qzc6\n/DRhEjLj9FNKFBg1ubRdqaiBJqjdT5h1Yw2IoME+LeiKzOGdFTiHt3bYR1v4UPQB\nClPQUC7RryXordJCMsqDVkoGv4uT5fGlgyk734oBUWkXGpNyQhzNs+8hfOgIi6nl\n6Yj27anNAgMBAAECggEAQhA63SYcaOZtxgPmspGW7YY/QMwHZieeaklmVBQjaEN6\nc6/+zDWsByBx9wPAuZC9iM1KuXirtHvbSC3TjkBvzSfx6e5SNH+T9rvERUSK4+5z\nFSj2KCzj74Hs28U24+KtRNP/AKLoPYaQFKCszN40Q/37wk/s/9ZDsEX5zdyDxVvP\nodqXRnKPh9d5A3jZNQpeHz+zwe6+vJKCFQIbivP3wR2Krl9bOnmJvKiT30Rl6Hu4\nrtaGatfPpMCBhhDCZLE+nMbNgGUKnJ7tRpx/wjhjqxIpgFtBdonCC4Yaisd+2N94\nrrx0w6C5tZQRVq8x9O/3omYA8K9I+f8x2YajpriFNwKBgQD4uq2PjkxrLAUBya98\n4uXwroQ5wrTyM2cfokoDcjxUqKN28PPPK4TEy1W9G0pO8/n4hliNRjdwh2j15405\nwRHA2qkVDTNTc4t2BEgzMAJUZsNpKlA4Z6nFq9AqtALHYyypy/razHlD3PxbGuwx\nnkAMGGI8cjM3zHM+2NhnWU0XjwKBgQDwUkPmdDhETe7hMBVdilDgF4h9nWRLNZnL\nBUWM0ZnPAJ1z99kAvxdFPGFfh7y7l2Z3Rh7JG/cQG3ncAisyErtxksqMdxvce1Wd\nnBdJD7CaXyH8yHYU7Jx9xdDFaZYCxnlu+THjEFSo3YROpkPlo+iZUJZ37+P2cuO3\nJbfIVV7a4wKBgQCUp/XNg822jAOeEu2YZX/qPlN2tiExVHmA1Z0IvEDElFnGX7JI\nEolymNhwgpwB3h17ZMgN/3ZpAfVAaxjj+LlkmwtNMquHZ9plOZ/xP/NUgGqwMwLp\nA0PbiZmLvDSg+GwcO3Z9SJH9dlk5FjkuWpeK4xPrbpGf+siyOiX0dtH1jwKBgB+p\nFtzzjr4g7kmohggOwtzi/M5fv+jQpPREO4dzzamh0RyIGISqqCws6j8lqM2mAo/Q\nIxonnwL2O7Wqa3prUVqDFkAvKPKBJSRgfgjYElIkGlwtJLFZArznJLv9TxAKidD+\n732UlzKwDFA4Q1WrpGceYNRoPEYpmKp2Q6IW7So1AoGBANjl89FXo/+kW6eo/a6e\nWAADcZrcgJ5XYi6kdM0u9WtM6yhJj0ePpCxTySlMeLeBrpSZmm3R/tBWzifqoNsf\nG8atqYjAxwm2G08orpAEl+OgSNf6zO7zk9dzsB750kv7BpgWtKuuRWILJmFce5VH\n8s78i3a6JBzdMuYybPGtjojx\n-----END PRIVATE KEY-----\n"
+
+
+//node_modules
+//package-lock.json
+
+
+
+//server.js
+import express from "express";
+import admin from "firebase-admin";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+// Initialize Firebase
+admin.initializeApp({
+  credential: admin.credential.cert({
+    projectId: process.env.FIREBASE_PROJECT_ID,
+    clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
+    privateKey: process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+  }),
+});
+
+const db = admin.firestore();
+
+const app = express();
+app.use(express.json());
+
+// Example route
+app.get("/", (req, res) => {
+  res.send("Firebase connected successfully!");
+});
+
+// Example write test
+app.post("/add", async (req, res) => {
+  try {
+    const { name, email } = req.body;
+    await db.collection("users").add({ name, email });
+    res.status(200).send("User added to Firebase!");
+  } catch (err) {
+    res.status(500).send(err.message);
+  }
+});
+
+app.listen(process.env.PORT, () =>
+  console.log(`Server running on port ${process.env.PORT}`)
+);
