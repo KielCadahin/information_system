@@ -15,12 +15,18 @@ export const createUser = async (req, res) => {
     if (!existing.empty)
       return res.status(400).json({ message: "Email already exists" });
 
+    // Remove undefined fields
+    Object.keys(data).forEach(key => data[key] === undefined && delete data[key]);
+
     const docRef = await db.collection("users").add(data);
     res.status(201).json({ id: docRef.id, message: "User created successfully" });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 };
+
+
+
 
 // READ ALL (optional filters)
 export const getUsers = async (req, res) => {
@@ -54,13 +60,18 @@ export const updateUser = async (req, res) => {
     const data = req.body;
     data.updatedAt = new Date();
 
+    // Remove undefined fields
+    Object.keys(data).forEach(key => data[key] === undefined && delete data[key]);
+
     const docRef = db.collection("users").doc(req.params.id);
     await docRef.update(data);
+
     res.status(200).json({ message: "User updated successfully" });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 };
+
 
 // DELETE
 export const deleteUser = async (req, res) => {

@@ -5,3 +5,26 @@
 | Update Student                                          | `PUT`    | `http://localhost:4000/api/students/{id}` | `{ "year": 2 }`                                                          |
 | Delete Student                                          | `DELETE` | `http://localhost:4000/api/students/{id}` | —                                                                        |
 | (Same for Teacher/Admin with `/teachers` and `/admins`) |          |                                           |                                                                          |
+
+
+
+
+
+
+
+    /node_modules
+    src/
+        /config
+            firebase.js
+        /controllers
+            userController.js
+        /routes
+            informationRoutes.js
+        app.js
+    .env
+    .gitignore
+    package.json
+    server.js
+
+
+    ganto talaga yung binigay mo sakin kanina

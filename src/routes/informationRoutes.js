@@ -16,8 +16,10 @@ const adminsRef = db.collection("admins");
 router.post("/students", async (req, res) => {
   try {
     const { name, email, course, year } = req.body;
-    const newStudent = { name, email, course, year, createdAt: new Date() };
-    const docRef = await studentsRef.add(newStudent);
+    // remove undefined fields before sending to Firestore
+    const newStudentRaw = { name, email, course, year, createdAt: new Date() };
+    Object.keys(newStudentRaw).forEach(key => newStudentRaw[key] === undefined && delete newStudentRaw[key]);
+    const docRef = await studentsRef.add(newStudentRaw);
     res.status(201).json({ id: docRef.id, message: "Student added successfully!" });
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -39,7 +41,10 @@ router.get("/students", async (req, res) => {
 router.put("/students/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    await studentsRef.doc(id).update(req.body);
+    // sanitize update payload to remove undefined fields
+    const updatePayload = { ...req.body };
+    Object.keys(updatePayload).forEach(key => updatePayload[key] === undefined && delete updatePayload[key]);
+    await studentsRef.doc(id).update(updatePayload);
     res.json({ message: "Student updated successfully!" });
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -64,8 +69,9 @@ router.delete("/students/:id", async (req, res) => {
 router.post("/teachers", async (req, res) => {
   try {
     const { name, email, department } = req.body;
-    const newTeacher = { name, email, department, createdAt: new Date() };
-    const docRef = await teachersRef.add(newTeacher);
+    const newTeacherRaw = { name, email, department, createdAt: new Date() };
+    Object.keys(newTeacherRaw).forEach(key => newTeacherRaw[key] === undefined && delete newTeacherRaw[key]);
+    const docRef = await teachersRef.add(newTeacherRaw);
     res.status(201).json({ id: docRef.id, message: "Teacher added successfully!" });
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -85,7 +91,9 @@ router.get("/teachers", async (req, res) => {
 router.put("/teachers/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    await teachersRef.doc(id).update(req.body);
+    const updatePayload = { ...req.body };
+    Object.keys(updatePayload).forEach(key => updatePayload[key] === undefined && delete updatePayload[key]);
+    await teachersRef.doc(id).update(updatePayload);
     res.json({ message: "Teacher updated successfully!" });
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -109,8 +117,9 @@ router.delete("/teachers/:id", async (req, res) => {
 router.post("/admins", async (req, res) => {
   try {
     const { name, email, role } = req.body;
-    const newAdmin = { name, email, role: role || "admin", createdAt: new Date() };
-    const docRef = await adminsRef.add(newAdmin);
+    const newAdminRaw = { name, email, role: role || "admin", createdAt: new Date() };
+    Object.keys(newAdminRaw).forEach(key => newAdminRaw[key] === undefined && delete newAdminRaw[key]);
+    const docRef = await adminsRef.add(newAdminRaw);
     res.status(201).json({ id: docRef.id, message: "Admin added successfully!" });
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -130,7 +139,9 @@ router.get("/admins", async (req, res) => {
 router.put("/admins/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    await adminsRef.doc(id).update(req.body);
+    const updatePayload = { ...req.body };
+    Object.keys(updatePayload).forEach(key => updatePayload[key] === undefined && delete updatePayload[key]);
+    await adminsRef.doc(id).update(updatePayload);
     res.json({ message: "Admin updated successfully!" });
   } catch (err) {
     res.status(500).json({ error: err.message });
